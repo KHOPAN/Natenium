@@ -1,41 +1,36 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
+	"id": "natenium",
+	"version": "1.0.0",
+	"name": "Natenium",
+	"description": "Destroy your world with Natenium!",
+	"authors": ["KHOPAN"],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/KHOPAN/Natenium"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+
+	"license": "MIT License",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.khopan.natenium.NateniumMod"
 		],
+
 		"client": [
-			"com.example.ExampleModClient"
+			"com.khopan.natenium.client.NateniumModClient"
 		]
 	},
+
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
+		"natenium.mixins.json", {
+			"config": "natenium.client.mixins.json",
 			"environment": "client"
 		}
 	],
+
 	"depends": {
-		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.2",
+		"java": ">=17"
 	}
 }
